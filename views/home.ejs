@@ -1,0 +1,20 @@
+<%- include("partials/head") %>
+    </head>
+
+    <body>
+        <%- include("partials/nav") %>
+            <h1 class="text-red-700 text-5xl">Here are our registered homes</h1>
+            <ul>
+                <% registeredHomes.forEach((home)=>{ %>
+
+                    <li>
+                        <%= home.houseName %>
+                    </li>
+
+                    <% }) %>
+
+            </ul>
+            <a href="/host/add-home">Add Home</a>
+    </body>
+
+    </html>
