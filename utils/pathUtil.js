@@ -1,3 +1,4 @@
-const path = require("path");
+// Core Module
+const path = require('path');
 
 module.exports = path.dirname(require.main.filename);

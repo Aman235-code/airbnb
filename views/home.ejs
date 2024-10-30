@@ -1,20 +1,22 @@
-<%- include("partials/head") %>
+<%- include('partials/head') %>
     </head>
 
     <body>
-        <%- include("partials/nav") %>
-            <h1 class="text-red-700 text-5xl">Here are our registered homes</h1>
-            <ul>
-                <% registeredHomes.forEach((home)=>{ %>
-
-                    <li>
-                        <%= home.houseName %>
-                    </li>
-
-                    <% }) %>
-
-            </ul>
-            <a href="/host/add-home">Add Home</a>
+        <%- include('partials/nav') %>
+            <main class="container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 max-w-xl">
+                <h2 class="text-3xl text-blue-500 font-bold text-center mb-6">
+                    Here are our registered homes:
+                </h2>
+                <ul class="space-y-4">
+                    <% registeredHomes.forEach(home=> { %>
+                        <li class="bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                            <span class="text-lg text-gray-800">
+                                <%= home.houseName %>
+                            </span>
+                        </li>
+                        <% }) %>
+                </ul>
+            </main>
     </body>
 
     </html>
